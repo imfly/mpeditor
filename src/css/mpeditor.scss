@@ -162,7 +162,7 @@
       $def-color: #333;
       $def-link-color: #3194d0;
       $warn-color: #E64340;
-      $title-color: #000;
+      $title-color: #0063ca;
 
       $def-font-size: 16px;
       $def-line-height: 1.7em;
@@ -195,7 +195,7 @@
         font-weight: bold;
         min-height: 32px;
         line-height: 28px;
-        border-bottom: solid 1px $title-color;
+        // border-bottom: solid 1px $title-color;
         color: $title-color;
         display: inline-block;
         margin:12px auto;
@@ -205,10 +205,22 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        &:after {
+          border-bottom: solid 7px $title-color;
+            content: "";
+            display: block;
+            text-align: center;
+            width: 70px;
+            margin: 10px auto 0;
+        }
       }
       h2{
         font-size: 18px;
+        border-left: 12px solid $title-color;
+        padding-left: 5px;  
+        color: $title-color;
       }
+
       h3 {
         font-size: 17px;
         font-weight: 600;
@@ -225,11 +237,12 @@
         font-weight: 600;
       }
       blockquote, q {
-        border-left: 6px solid #b4b4b4;
-        background-color: #f7f7f7;
+        border: 6px double #b4b4b4;
+        background-color: rgba(222, 215, 215, 0.04);
         padding: 0.8em 1em;
-        color: #777;
+        color: #191818;
         quotes: none;
+        font-weight: bold;
 
         p{
           margin:0;
